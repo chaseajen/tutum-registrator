@@ -34,6 +34,7 @@ function processResponseBody(body, callback) {
         // Get both the private IP and the public DNS
         var privateIp = container.private_ip;
         var publicDns = container.public_dns;
+        var uuid = container.uuid;
         
         // Enumerate the ports
         var ports = container.container_ports;
@@ -48,7 +49,7 @@ function processResponseBody(body, callback) {
 
             // Create the service object
             var service = {
-                id: containerName + "-" + serviceName,
+                id: containerName + "-" + serviceName + "-" + uuid,
                 name: serviceName,
                 container: containerName,
                 published: published

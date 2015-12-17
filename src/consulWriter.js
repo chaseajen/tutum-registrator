@@ -10,7 +10,8 @@ function registerServices(consulHost, consulPort, services) {
     var consul = require('consul')({ host: consulHost, port: consulPort });
     
     // Enumerate the services
-    services.forEach(function (service) {// Register the service
+    services.forEach(function (service) {
+        // Register the service
         consul.agent.service.register({
             name: service.name,
             id: service.id,
