@@ -8,4 +8,4 @@ WORKDIR /src
 RUN npm install
 
 # Run node program
-ENTRYPOINT ["./run.sh"]
+ENTRYPOINT node program $TUTUM_USER $TUTUM_TOKEN $CONSUL_HOST $CONSUL_PORT $REFRESH_INTERVAL
