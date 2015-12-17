@@ -8,4 +8,4 @@ WORKDIR /src
 RUN npm install
 
 # Run node program
-ENTRYPOINT ["node", "program"]
+ENTRYPOINT node program
