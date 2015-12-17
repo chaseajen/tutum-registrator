@@ -18,7 +18,7 @@ function readContainers(url, user, token, callback) {
     });
 }
 
-    // Process the raw response from the tutum container API and create service objects from it
+// Process the raw response from the tutum container API and create service objects from it
 function processResponseBody(body, callback) {
     // Parse as JSON
     var data = JSON.parse(body);

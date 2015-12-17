@@ -1,6 +1,6 @@
 FROM node
 
-COPY . /src
+COPY src /src
 
 WORKDIR /src
 RUN npm config set loglevel win
