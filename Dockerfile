@@ -1,9 +1,11 @@
 FROM node
 
+# Copy source
 COPY src /src
 
+# Change working directories and install dependencies
 WORKDIR /src
-RUN npm config set loglevel win
 RUN npm install
 
-CMD ["node", "program"]
+# Run node program
+ENTRYPOINT ["node", "program"]
