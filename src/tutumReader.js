@@ -29,7 +29,7 @@ function processResponseBody(body, callback) {
         var container = data.objects[i];
 
         var containerName = container.name;
-        var tutumServiceName = containerName.split('-')[0];
+        var tutumServiceName = containerName.substring(0, containerName.lastIndexOf('-'));
         
         // Get both the private IP and the public DNS
         var privateIp = container.private_ip;

@@ -6,7 +6,7 @@ var containerApiUrl = "https://dashboard.tutum.co/api/v1/container";
 
 // Check args
 var args = process.argv;
-if (args.length < 6) {
+if (args.length < 7) {
     console.error("Insufficient arguments. Usage: node program tutum_user tutum_api_token consul_host consul_port refresh_interval_ms");
     process.exit(1);
 }
